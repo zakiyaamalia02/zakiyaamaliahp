@@ -1,0 +1,168 @@
+style
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.btn{
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.btn.click{
+    left: 260px;
+}
+.btn span{
+    color: white;
+    font-size: 28px;
+    line-height: 40px;
+}
+.btn.click span:before{
+    content: '/f00d';
+}
+.sidebar{
+    position: fixed;
+    width: 300px;
+    left: 0;
+}
+.sidebar, text{
+    color: white;
+    font-size: 35px;
+    padding-right: 5%;
+    padding-top: 2%;
+    font-weight: 480px;
+    line-height: 8px;
+    text-align: left;
+    background:lightblue;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    transition: left 0.4s ease;
+}
+.sidebar.show{
+    left: 0;
+}
+nav ul{
+    background:cadetblue;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+nav ul li{
+    line-height: 45px;
+    border-bottom: 1px solid rgba(red, green, blue, alpha);
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-right: 3px;
+    font-weight: 350px;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+nav ul li a:hover{
+    color: skyblue;
+    background: #1e1e1e;
+    border-left-color: steelblue;
+}
+nav ul ul{
+    position: static;
+    display: none;
+}
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a{
+    font-size: 17px;
+    color: blueviolet;
+    padding-left: 70px;
+}
+nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50);
+    font-size: 20px;
+    transition: transform 0.4s;
+}
+nav ul li a:hover span{
+    transform: translateY(-60%) rotate(-180deg);
+}
+body{
+    background: cadetblue;
+}
+body, text{
+    color: white;
+}
+#check {
+    display: none;
+    color: black;
+}
+label #btn, label #cancel {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    font-size: 27px;
+    text-align: center;
+    line-height: 60px;
+    color: black;
+    margin: 5px 30 px;
+    border: 5px solid black;
+    border-radius: 5px;
+    background: dodgerblue;
+    transition: all .5s ease;
+}
+label #btn {
+    left: 100px;
+    top: 10px;
+    font-size: 35px;
+    color: black;
+
+}
+label #cancel {
+    z-index: 1111;
+    left: 195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding-right: 4px 9px;
+    opacity: 0;
+    visibility: hidden;
+    color: black;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn {
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ label #cancel {
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
