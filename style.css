@@ -155,7 +155,23 @@ label #cancel {
     opacity: 1;
     visibility: visible;
 }
-
+.sidebar .profile-detail{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar .profile-detail .profile-name,
+.sidebar .profile-detail .job{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.sidebar .profile-detail .job{
+    font-size: 12px;
+    
+}
 
 
 
