@@ -1,184 +1,127 @@
 style
-*{
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-.btn{
-    position: absolute;
-    top: 15px;
-    left: 45px;
-    height: 45px;
-    width: 45px;
-    text-align: center;
-    background: black;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: left 0.4s ease;
-}
-.btn.click{
-    left: 260px;
-}
-.btn span{
-    color: white;
-    font-size: 28px;
-    line-height: 40px;
-}
-.btn.click span:before{
-    content: '/f00d';
-}
-.sidebar{
-    position: fixed;
-    width: 300px;
-    left: 0;
-}
-.sidebar, text{
-    color: white;
-    font-size: 35px;
-    padding-right: 5%;
-    padding-top: 2%;
-    font-weight: 480px;
-    line-height: 8px;
-    text-align: left;
-    background:lightblue;
-    letter-spacing: 1px;
-    padding-left: 10px;
-    transition: left 0.4s ease;
-}
-.sidebar.show{
-    left: 0;
-}
-nav ul{
-    background:cadetblue;
-    height: 100%;
-    width: 100%;
-    list-style: none;
-}
-nav ul li{
-    line-height: 45px;
-    border-bottom: 1px solid rgba(red, green, blue, alpha);
-}
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding-right: 3px;
-    font-weight: 350px;
-    display: block;
-    width: 100%;
-    border-left: 3px solid transparent;
-}
-nav ul li a:hover{
-    color: skyblue;
-    background: #1e1e1e;
-    border-left-color: steelblue;
-}
-nav ul ul{
-    position: static;
-    display: none;
-}
-nav ul ul li{
-    line-height: 42px;
-    border-bottom: none;
-}
-nav ul ul li a{
-    font-size: 17px;
-    color: blueviolet;
-    padding-left: 70px;
-}
-nav ul li a span{
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    transform: translateY(-50);
-    font-size: 20px;
-    transition: transform 0.4s;
-}
-nav ul li a:hover span{
-    transform: translateY(-60%) rotate(-180deg);
-}
-body{
-    background: cadetblue;
-}
-body, text{
-    color: white;
-}
-#check {
-    display: none;
-    color: black;
-}
-label #btn, label #cancel {
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    font-size: 27px;
-    text-align: center;
-    line-height: 60px;
-    color: black;
-    margin: 5px 30 px;
-    border: 5px solid black;
-    border-radius: 5px;
-    background: dodgerblue;
-    transition: all .5s ease;
-}
-label #btn {
-    left: 100px;
-    top: 10px;
-    font-size: 35px;
-    color: black;
+<style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            box-sizing: border-box;
+            font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';  
+            }
+        .sidebar {
+            position: fixed;
+            width: 285px;
+            height: 200%;
+            left: -250px;
+            background: #1b1b1b;
+            top: 0;
+            height: 100%;
+        }
+        .sidebar .text {
+            color: white;
+            font-size: 25px;
+            font-weight: 600%;
+            line-height: 40px;
+            text-align: center;
+            background: #1e1e1e;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            background: #1b1b1b;
+            height: 0%;
+            width: 250px;
+            list-style: none;
+        }
+        nav ul li {
+            line-height: 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding-left: 0;
+            font-weight: 500%;
+            display: block;
+            height: 100%;
+            border-left: 3px solid transparent;
+        }
+        nav ul li a:hover {
+            color: pink;
+            background: #1e1e1e;
+            border-left-color: lightpink;
+        }
+        nav ul ul {
+            position: static;
+            display: none;
+        }
+        nav ul ul li {
+            line-height: 45px;
+            border-bottom: none;
+        }
+        nav ul ul li a {
+            font-size: 17px;
+            color: #e6e6e6;
+            padding-left: 80px;
+        }
+        .sidebar ul li .dropdown{
+            display: none;
+        }
+        .sidebar ul li:hover .dropdown {
+            display: block;
+            background: black;
+            position: absolute;
+            padding: 0px;
 
-}
-label #cancel {
-    z-index: 1111;
-    left: 195px;
-    top: 17px;
-    font-size: 30px;
-    color: white;
-    padding-right: 4px 9px;
-    opacity: 0;
-    visibility: hidden;
-    color: black;
-}
-#check:checked ~ .sidebar{
-    left: 0;
-}
-#check:checked ~ label #btn {
-    margin-left: 245px;
-    opacity: 0;
-    visibility: hidden;
-}
-#check:checked ~ label #cancel {
-    margin-left: 245px;
-    opacity: 1;
-    visibility: visible;
-}
-.sidebar .profile-detail{
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.sidebar .profile-detail .profile-name,
-.sidebar .profile-detail .job{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-}
-.sidebar .profile-detail .job{
-    font-size: 12px;
-    
-}
+        }
 
+    .menu ul li:hover .dropdown li {
+        display: block;
+    }
+    .active {
 
+    }
+    #check {
+        display: none;
 
-
-
-
-
-
-
-
+    }
+    label #btn, label #cancel {
+        position: absolute;
+        height: 45px;
+        width: 45px;
+        top: 0px;
+        cursor: pointer;
+        font-size: 27px;
+        text-align: center;
+        line-height: 45px;
+        color: white;
+        margin: 5px 30px;
+        border: 5px solid black;
+        border-radius: 5px;
+        background: black;
+        transition: all .5s ease;
+    }
+    label #cancel {
+        opacity: 0;
+        visibility: hidden;
+    }
+    #check:checked ~ .sidebar {
+        left: 0;
+    }
+    #check:checkedc~ label #btn {
+        margin-left: 265px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #check:checked ~ label #cancel {
+        margin-left: 270px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .text {
+    margin: 25px;
+    margin-top: 0;
+        }
+        .a {
+            margin-left: 25px;
+        }
+    </style>
