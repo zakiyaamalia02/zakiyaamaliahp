@@ -10,8 +10,8 @@ style
         .sidebar {
             position: fixed;
             width: 285px;
-            height: 200%;
-            left: -250px;
+            height: 250%;
+            left: -280px;
             background: #1b1b1b;
             top: 0;
             height: 100%;
@@ -71,18 +71,14 @@ style
             background: black;
             position: absolute;
             padding: 0px;
-
         }
-
     .menu ul li:hover .dropdown li {
         display: block;
     }
     .active {
-
     }
-    #check {
+     #check {
         display: none;
-
     }
     label #btn, label #cancel {
         position: absolute;
@@ -110,7 +106,7 @@ style
     #check:checkedc~ label #btn {
         margin-left: 265px;
         opacity: 0;
-        visibility: hidden;
+        visibility: visible;
     }
     #check:checked ~ label #cancel {
         margin-left: 270px;
